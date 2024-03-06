@@ -1,0 +1,13 @@
+git -v/git --version #Know the version of git
+git config --global user.name "[YOUR USERNAME]" #Configure your username
+git config --global user.email "[YOUR EMAIL]" #Configure your email
+git init #Create a new git repository
+git commit status #Check the status of a repository
+git add . #Add an entire working directory to the staging area
+git add [NAME OF THE FILE] #Add a single file:
+git reset . #Remove all the files from the staging area
+git reset [NAME OF THE FILE] #Remove a files from the staging area
+git commit -m "[MESSAGE]" #This command will commit only the changes that have been explicitly staged using git add and then commit them with [MESSAGE].
+git commit -a -m "[MESSAGE]"/git commit -am "[MESSAGE]" #This command will stage all changes that have been made to tracked files and then commit them with [MESSAGE].
+git log #See history of commits with [ID OF COMMIT], [AUTOR], [DATE], [MESSAGE].
+
