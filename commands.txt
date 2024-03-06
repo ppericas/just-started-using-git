@@ -1,20 +1,24 @@
 git -v/git --version                                    ### Know the version of git.
-git config --global user.name "[YOUR USERNAME]"         ### Configure your username.
-git config --global user.email "[YOUR EMAIL]"           ### Configure your email.
+git config --global user.name "<YOUR USERNAME>"         ### Configure your username.
+git config --global user.email "<YOUR EMAIL>"           ### Configure your email.
 git init                                                ### Create a new git repository.
 git commit status                                       ### Check the status of a repository.
 git add .                                               ### Add an entire working directory to the staging area.
-git add [NAME OF THE FILE]                              ### Add a single file.
+git add <NAME OF THE FILE>                              ### Add a single file.
 git reset .                                             ### Remove all the files from the staging area.
-git reset [NAME OF THE FILE]                            ### Remove a files from the staging area.
-git commit -m "[MESSAGE]"                               ### This command will commit only the changes that have been explicitly staged using git add and then commit them with [MESSAGE].
-git commit -a -m "[MESSAGE]"/git commit -am "[MESSAGE]" ### This command will stage all changes that have been made to tracked files and then commit them with [MESSAGE].
-git log                                                 ### See history of commits with [ID OF COMMIT], [AUTOR], [DATE], [MESSAGE].
-git [ANY command] --dry-run                             ### Simulate the command's operation without actually performing it.
+git reset <NAME OF THE FILE>                            ### Remove a files from the staging area.
+git commit -m "<MESSAGE>"                               ### This command will commit only the changes that have been explicitly staged using git add and then commit them with <MESSAGE>.
+git commit -a -m "<MESSAGE>"/git commit -am "<MESSAGE>" ### This command will stage all changes that have been made to tracked files and then commit them with <MESSAGE>.
+git log                                                 ### See history of commits with <ID OF COMMIT>, <AUTOR>, <DATE>, <MESSAGE>.
+git <ANY COMMAND> --dry-run                             ### Simulate the command's operation without actually performing it.
 git remote                                              ### List current remotes (other repositories) in the local repository.
+git remote remove <NAME OF REMOTE>                      ### Remove the remote repository named "origin" from your local repository. Note that this command only removes the remote from your local repository; it does not delete the remote repository from the server.
 git remote -v                                           ### List current remotes in the local repository and its own URL.
-git remote show [NAME OF REMOTE]                        ### List current remotes in the local repository, its own URL and the head branch (current branch).
-git remote add [NAME OF REMOTE] [URL TO REPOSITORY]     ### Add a new remote repository to your local one.
-git push [NAME OF REMOTE] [BRANCH] -u                   ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
-git fetch [NAME OF REMOTE]                                               ### Download commits, files, and refs from the remote repository to your local repository.
-git merge [NAME OF REMOTE]/[BRANCH]                     ### Merge the changes from the remote branch into your local branch
+git remote show <NAME OF REMOTE>                        ### List current remotes in the local repository, its own URL and the head branch (current branch).
+git remote add <NAME OF REMOTE> <URL TO REPO>           ### Add a new remote repository to your local one.
+git push <NAME OF REMOTE> <BRANCH> -u                   ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
+git fetch <NAME OF REMOTE>                              ### Download commits, files, and refs from the remote repository to your local repository.
+git merge <NAME OF REMOTE>/<BRANCH>                     ### Merge the changes from the remote branch into your local branch
+git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch and git merge.
+git clone <URL OF REPO>                                 ### Clone an existing repository into  new local directory called <REPO NAME>.
+git clone <URL OF REPO> <LOCAL DIRECTORY>               ### Clone an existing repository into a new directory.
