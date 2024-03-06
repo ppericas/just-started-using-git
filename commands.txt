@@ -11,3 +11,4 @@ git commit -m "[MESSAGE]" #This command will commit only the changes that have b
 git commit -a -m "[MESSAGE]"/git commit -am "[MESSAGE]" #This command will stage all changes that have been made to tracked files and then commit them with [MESSAGE].
 git log #See history of commits with [ID OF COMMIT], [AUTOR], [DATE], [MESSAGE].
 
+
