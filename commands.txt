@@ -15,6 +15,6 @@ git remote                                              ### List current remotes
 git remote -v                                           ### List current remotes in the local repository and its own URL.
 git remote show [NAME OF REMOTE]                        ### List current remotes in the local repository, its own URL and the head branch (current branch).
 git remote add [NAME OF REMOTE] [URL TO REPOSITORY]     ### Add a new remote repository to your local one.
-git push [NAME OF REMOTE] [BRANCH TO PUSH] -u           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
-
-
+git push [NAME OF REMOTE] [BRANCH] -u                   ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
+git fetch [NAME OF REMOTE]                                               ### Download commits, files, and refs from the remote repository to your local repository.
+git merge [NAME OF REMOTE]/[BRANCH]                     ### Merge the changes from the remote branch into your local branch
