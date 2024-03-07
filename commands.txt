@@ -35,3 +35,4 @@ git <ANY COMMAND> --dry-run                             ### Simulate the command
 
 
 Line to create a conflict
+Added in awesome, saved but not commited
