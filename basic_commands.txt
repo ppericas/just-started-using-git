@@ -1,4 +1,4 @@
-git init                                                ### Create a new git repository.
+git init                                                ### Create a new git repository in the current directory and initializes it with a hidden .git directory.
 git -v/git --version                                    ### Know the version of git.
 git config --global user.name "<USERNAME>"              ### Configure your username.
 git config --global user.email "<EMAIL>"                ### Configure your email.
