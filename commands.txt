@@ -19,7 +19,7 @@ git remote remove <REMOTE>                              ### Default <REMOTE> is 
 git push <REMOTE> <BRANCH> -u                           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
 git fetch <REMOTE>                                      ### Download commits, files, and refs from the remote repository to your local repository.
 git merge <REMOTE>/<BRANCH>                             ### Merge the changes from the remote branch into your local branch
-git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch and git merge.
+git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch <REMOTE> and git merge <REMOTE>/<BRANCH>.
 git clone <REPO URL>                                    ### Clone an existing repository into  new local directory called <REPO NAME>.
 git clone <REPO URL> <LOCAL DIRECTORY>                  ### Clone an existing repository into a new directory called <LOCAL DIRECTORY>.
 git branch                                              ### List current branches in the current Git repo.
@@ -28,6 +28,8 @@ git branch <BRANCH>                                     ### Create a new branch.
 git branch -d <BRANCH>                                  ### Delete a branch but it will only succeed if the branch has been fully merged with the current branch.
 git branch -D <BRANCH>                                  ### Delete a branch but it will delete the branch even if it has unmerged commits.
 git checkout <BRANCH>                                   ### Switch to <BRANCH>.
+git checkout -b <BRANCH>                                ### Create a new branch and switch into <BRANCH>. It is essentially a combination of two commands: git branch <BRANCH> and git checkout <BRANCH>.
+git checkout -                                          ### Switch to previous branch.
 
 git <ANY COMMAND> --dry-run                             ### Simulate the command's operation without actually performing it.
 
