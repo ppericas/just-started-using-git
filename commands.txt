@@ -19,6 +19,8 @@ git remote remove <REMOTE>                              ### Default <REMOTE> is 
 git push <REMOTE> <BRANCH> -u                           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
 git fetch <REMOTE>                                      ### Download commits, files, and refs from the remote repository to your local repository.
 git merge <REMOTE>/<BRANCH>                             ### Merge the changes from the remote branch into your local branch
+git merge --abort
+git diff                                                ### See the changes when there is a merge conflict.
 git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch <REMOTE> and git merge <REMOTE>/<BRANCH>.
 git clone <REPO URL>                                    ### Clone an existing repository into  new local directory called <REPO NAME>.
 git clone <REPO URL> <LOCAL DIRECTORY>                  ### Clone an existing repository into a new directory called <LOCAL DIRECTORY>.
@@ -35,4 +37,3 @@ git <ANY COMMAND> --dry-run                             ### Simulate the command
 
 
 Line to create a conflict
-Added in master
