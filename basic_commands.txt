@@ -1,11 +1,11 @@
+git init                                                ### Create a new git repository.
 git -v/git --version                                    ### Know the version of git.
 git config --global user.name "<USERNAME>"              ### Configure your username.
 git config --global user.email "<EMAIL>"                ### Configure your email.
-git init                                                ### Create a new git repository.
-git add .                                               ### Add an entire working directory to the staging area.
 git add <FILE>                                          ### Add a single file.
-git reset .                                             ### Remove all the files from the staging area.
+git add .                                               ### Add an entire working directory to the staging area.
 git reset <FILE>                                        ### Remove a files from the staging area.
+git reset .                                             ### Remove all the files from the staging area.
 git commit status                                       ### Check the status of a repository.
 git commit -m "<MESSAGE>"                               ### This command will commit only the changes that have been explicitly staged using git add and then commit them with <MESSAGE>.
 git commit -a -m "<MESSAGE>"/git commit -am "<MESSAGE>" ### This command will stage all changes that have been made to tracked files and then commit them with <MESSAGE>.
@@ -16,9 +16,9 @@ git remote show <REMOTE>                                ### List current remotes
 git remote add <REMOTE> <REPO URL>                      ### Add a new remote repository to your local one.
 git remote rename <REMOTE> <RENAMED BRANCH>             ### Rename <REMOTE> TO <RENAMED BRANCH>.
 git remote remove <REMOTE>                              ### Default <REMOTE> is Remove the remote repository named "origin" from your local repository. Note that this command only removes the remote from your local repository; it does not delete the remote repository from the server.
-git push <REMOTE> <BRANCH> -u                           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
+git push -u <REMOTE> <BRANCH>                           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
 git fetch <REMOTE>                                      ### Download commits, files, and refs from the remote repository to your local repository.
-git merge <REMOTE>/<BRANCH>                             ### Merge the changes from the remote branch into your local branch
+git merge <REMOTE>/<BRANCH>                             ### Merge the changes from the remote branch into your local branch.
 git merge --abort                                       ### Abort last merge.
 git diff                                                ### See the changes when there is a merge conflict.
 git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch <REMOTE> and git merge <REMOTE>/<BRANCH>.
@@ -32,5 +32,4 @@ git branch -D <BRANCH>                                  ### Delete a branch but 
 git checkout <BRANCH>                                   ### Switch to <BRANCH>.
 git checkout -b <BRANCH>                                ### Create a new branch and switch into <BRANCH>. It is essentially a combination of two commands: git branch <BRANCH> and git checkout <BRANCH>.
 git checkout -                                          ### Switch to previous branch.
-
 git <ANY COMMAND> --dry-run                             ### Simulate the command's operation without actually performing it.
