@@ -1,27 +1,33 @@
 git -v/git --version                                    ### Know the version of git.
-git config --global user.name "<YOUR USERNAME>"         ### Configure your username.
-git config --global user.email "<YOUR EMAIL>"           ### Configure your email.
+git config --global user.name "<USERNAME>"              ### Configure your username.
+git config --global user.email "<EMAIL>"                ### Configure your email.
 git init                                                ### Create a new git repository.
 git add .                                               ### Add an entire working directory to the staging area.
-git add <NAME OF THE FILE>                              ### Add a single file.
+git add <FILE>                                          ### Add a single file.
 git reset .                                             ### Remove all the files from the staging area.
-git reset <NAME OF THE FILE>                            ### Remove a files from the staging area.
+git reset <FILE>                                        ### Remove a files from the staging area.
 git commit status                                       ### Check the status of a repository.
 git commit -m "<MESSAGE>"                               ### This command will commit only the changes that have been explicitly staged using git add and then commit them with <MESSAGE>.
 git commit -a -m "<MESSAGE>"/git commit -am "<MESSAGE>" ### This command will stage all changes that have been made to tracked files and then commit them with <MESSAGE>.
 git log                                                 ### See history of commits with <ID OF COMMIT>, <AUTOR>, <DATE>, <MESSAGE>.
 git remote                                              ### List current remotes (other repositories) in the local repository.
 git remote -v                                           ### List current remotes in the local repository and its own URL.
-git remote show <NAME OF REMOTE>                        ### List current remotes in the local repository, its own URL and the head branch (current branch).
-git remote add <NAME OF REMOTE> <URL TO REPO>           ### Add a new remote repository to your local one.
-git remote rename <NAME OF REMOTE> <NEW NAME OF REMOTE> ### Rename name of <NAME OF REMOTE>.
-git remote remove <NAME OF REMOTE>                      ### Default <NAME OF REMOTE> is Remove the remote repository named "origin" from your local repository. Note that this command only removes the remote from your local repository; it does not delete the remote repository from the server.
-git push <NAME OF REMOTE> <BRANCH> -u                   ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
-git fetch <NAME OF REMOTE>                              ### Download commits, files, and refs from the remote repository to your local repository.
-git merge <NAME OF REMOTE>/<BRANCH>                     ### Merge the changes from the remote branch into your local branch
+git remote show <REMOTE>                                ### List current remotes in the local repository, its own URL and the head branch (current branch).
+git remote add <REMOTE> <REPO URL>                      ### Add a new remote repository to your local one.
+git remote rename <REMOTE> <RENAMED BRANCH>             ### Rename <REMOTE> TO <RENAMED BRANCH>.
+git remote remove <REMOTE>                              ### Default <REMOTE> is Remove the remote repository named "origin" from your local repository. Note that this command only removes the remote from your local repository; it does not delete the remote repository from the server.
+git push <REMOTE> <BRANCH> -u                           ### Push local commits to a remote repository. The `-u` flag will set up tracking information.
+git fetch <REMOTE>                                      ### Download commits, files, and refs from the remote repository to your local repository.
+git merge <REMOTE>/<BRANCH>                             ### Merge the changes from the remote branch into your local branch
 git pull                                                ### Update the current branch with updates from the remote. It is essentially a combination of two commands: git fetch and git merge.
-git clone <URL OF REPO>                                 ### Clone an existing repository into  new local directory called <REPO NAME>.
-git clone <URL OF REPO> <LOCAL DIRECTORY>               ### Clone an existing repository into a new directory.
+git clone <REPO URL>                                    ### Clone an existing repository into  new local directory called <REPO NAME>.
+git clone <REPO URL> <LOCAL DIRECTORY>                  ### Clone an existing repository into a new directory called <LOCAL DIRECTORY>.
+git branch                                              ### List current branches in the current Git repo.
+git branch -M <RENAMED BRANCH>                          ### Rename the current branch you are in to <NEW BRANCH NAME>.
+git branch <BRANCH>                                     ### Create a new branch.
+git branch -d <BRANCH>                                  ### Delete a branch but it will only succeed if the branch has been fully merged with the current branch.
+git branch -D <BRANCH>                                  ### Delete a branch but it will delete the branch even if it has unmerged commits.
+git checkout <BRANCH>                                   ### Switch to <BRANCH>.
 
 git <ANY COMMAND> --dry-run                             ### Simulate the command's operation without actually performing it.
 
