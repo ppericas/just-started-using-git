@@ -1,0 +1,11 @@
+git reset <ID COMMIT>                                   ### Reset to <ID COMMIT>. Non-destructive command that moves the branch pointer to a specific commit, but it keeps the changes in the index and working directory.
+git reset --hard <ID COMMIT>                            ### Resets your branch to a specific commit. Destructive command that moves the branch pointer to a specific commit and discards any changes in the index and working directory. This command removes changes from both the staging area and the working copy, and it cannot be undone.
+git revert <ID COMMIT> -m "<MESSAGE>"                   ### Creates a new commit that undoes the changes made in a specific commit. This command does not delete any commits from your repository, and it allows you to keep a record of all changes that have been made.
+git commit --amend -m "<MESSAGE>"                       ### Update the message on your last commit.
+git commit --amend --no-edit                            ### Include a file you forgot on your last commit after using git add.
+git stash                                               ### Stash changes in working directory.
+git stash save <MESSAGE>                                ### Stash changes in working directory with a specific message.
+git stash pop                                           ### Apply any changes that were saved with 'git stash'.
+git stash list                                          ### List all the stashed items.
+git stash apply <INDEX>                                 ### Apply the changes that were saved in 'git list' <INDEX>.
+git rebase <MASTER BRANCH>                              ### Alternative of merge. From a <FEATURE BRANCH>, rebase the latest changes from the <MASTER BRANCH>.
